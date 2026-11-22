@@ -3,7 +3,9 @@
 #   curl -sI "https://<projekt>.netlify.app/?page_id=73"
 
 # Schritt 1: ?page_id=… auf einen sauberen Pfad abbilden
-/  page_id=:id  /alte-seite/:id  301
+# "!" erzwingt die Regel, obwohl unter "/" die index.html liegt (sonst ignoriert Netlify sie).
+# Greift nur, wenn page_id gesetzt ist – die normale Startseite bleibt unberührt.
+/  page_id=:id  /alte-seite/:id  301!
 
 # Schritt 2: alte Seiten-IDs auf neue URLs
 /alte-seite/73    /alla-hopp         301

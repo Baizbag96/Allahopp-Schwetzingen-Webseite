@@ -42,6 +42,9 @@ export default defineNuxtConfig({
     // (Ohne das erkennt Nitro Netlify und schreibt nach dist/.)
     preset: 'static',
     prerender: {
+      // kontakt.html statt kontakt/index.html → Netlify liefert /kontakt direkt aus,
+      // ohne Umleitung auf /kontakt/
+      autoSubfolderIndex: false,
       crawlLinks: true,
       routes: ['/'],
     },
