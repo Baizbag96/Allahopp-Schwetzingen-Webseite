@@ -38,6 +38,9 @@ export default defineNuxtConfig({
 
   // Statische Seite: alle Routen beim `nuxt generate` vorrendern
   nitro: {
+    // Festes Preset: Ausgabe immer nach .output/public – lokal wie auf Netlify.
+    // (Ohne das erkennt Nitro Netlify und schreibt nach dist/.)
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/'],
