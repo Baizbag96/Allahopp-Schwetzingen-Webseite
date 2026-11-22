@@ -45,6 +45,12 @@
       "presentation": { "panel": "dedicated", "reveal": "always" }
     },
     {
+      "label": "Server stoppen",
+      "type": "npm",
+      "script": "stop",
+      "problemMatcher": []
+    },
+    {
       "label": "Abhängigkeiten installieren",
       "type": "npm",
       "script": "install",

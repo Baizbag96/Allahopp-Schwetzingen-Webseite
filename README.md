@@ -26,6 +26,7 @@ Ordner `VueJS-Project` in VS Code öffnen, dann:
 
 - **Ausführen und Debuggen** (Strg+Umschalt+D) → oben Konfiguration wählen → ▶ (oder F5)
   - ▶ Dev-Server starten – öffnet den Browser automatisch
+  - ⏹ Server stoppen – beendet Dev-Server und Vorschau (auch `npm run stop`)
   - 🔨 Build (statisch generieren)
   - 👀 Build + Vorschau
 - **Strg+Umschalt+B** startet direkt den Build

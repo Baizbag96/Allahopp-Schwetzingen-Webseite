@@ -16,6 +16,13 @@
       }
     },
     {
+      "name": "⏹ Server stoppen",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run stop",
+      "cwd": "${workspaceFolder}"
+    },
+    {
       "name": "🔨 Build (statisch generieren)",
       "type": "node-terminal",
       "request": "launch",
