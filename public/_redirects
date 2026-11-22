@@ -1,0 +1,26 @@
+# Netlify-Redirects: alte WordPress-URLs -> neue Seiten (Google-Rankings erhalten)
+# Nach dem Deploy jede Zeile prüfen, z. B.:
+#   curl -sI "https://<projekt>.netlify.app/?page_id=73"
+
+# Schritt 1: ?page_id=… auf einen sauberen Pfad abbilden
+/  page_id=:id  /alte-seite/:id  301
+
+# Schritt 2: alte Seiten-IDs auf neue URLs
+/alte-seite/73    /alla-hopp         301
+/alte-seite/4606  /kindergeburtstag  301
+/alte-seite/4611  /oeffnungszeiten   301
+/alte-seite/312   /kontakt           301
+/alte-seite/3     /datenschutz       301
+/alte-seite/*     /                  301
+
+/privacy-policy   /datenschutz       301
+/privacy-policy/  /datenschutz       301
+
+# Speise- und Getränkekarte
+/wp-content/uploads/2026/01/Tafel-alla-Hopp-Speisen_2025.pdf    /karten/speisen.pdf    301
+/wp-content/uploads/2026/01/Karte-alla-hopp-Getraenke_2025.pdf  /karten/getraenke.pdf  301
+
+# Restliche WordPress-Pfade
+/wp-admin/*     /  301
+/wp-content/*   /  301
+/wp-login.php   /  301

@@ -1,0 +1,14 @@
+# Sicherheits-Header (Netlify / Cloudflare Pages)
+# Die eigentliche CSP (script-src mit Hashes) kommt als <meta>-Tag von nuxt-security.
+# Hier nur die Direktiven, die per <meta> nicht funktionieren (frame-ancestors).
+# HSTS "preload" erst ergänzen, wenn alles stabil auf HTTPS läuft.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: frame-ancestors 'none'; base-uri 'none'; object-src 'none'
+
+/_nuxt/*
+  Cache-Control: public, max-age=31536000, immutable

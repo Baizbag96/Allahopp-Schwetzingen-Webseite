@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Markenfarben – an das Logo anpassen, sobald es in Originalqualität vorliegt */
+  --color-brand: #e2001a;
+  --color-brand-dark: #b00014;
+  --color-accent: #ffcc00;
+
+  /* Systemschriften: keine externen Fonts nötig (DSGVO).
+     Eigene Schrift später lokal unter app/assets/fonts einbinden. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
