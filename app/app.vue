@@ -6,7 +6,7 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: computed(() => `https://www.allahopp-schwetzingen.de${route.path}`),
+      href: computed(() => `https://allahopp-schwetzingen.de${route.path}`),
     },
   ],
 })

@@ -16,10 +16,10 @@ useHead({
         name: site.name,
         telephone: '+49 6202 9546252',
         email: site.email,
-        url: 'https://www.allahopp-schwetzingen.de/',
-        logo: 'https://www.allahopp-schwetzingen.de/bilder/logo.png',
+        url: 'https://allahopp-schwetzingen.de/',
+        logo: 'https://allahopp-schwetzingen.de/bilder/logo.png',
         servesCuisine: ['Imbiss', 'Café', 'Pizza', 'Flammkuchen'],
-        menu: 'https://www.allahopp-schwetzingen.de/karten/speisen.pdf',
+        menu: 'https://allahopp-schwetzingen.de/karten/speisen.pdf',
         address: {
           '@type': 'PostalAddress',
           streetAddress: site.street,

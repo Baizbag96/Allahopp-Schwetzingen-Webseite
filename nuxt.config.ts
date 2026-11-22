@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://www.allahopp-schwetzingen.de',
+    url: 'https://allahopp-schwetzingen.de',
     name: 'alla hopp! Schwetzingen',
   },
 
