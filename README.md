@@ -13,9 +13,23 @@ npm run dev        # http://localhost:3000
 ## Statischer Build
 
 ```bash
-npm run generate   # Ausgabe: .output/public
-npx serve .output/public   # lokal testen (Redirects/Header greifen nur beim Hoster)
+npm run generate        # Ausgabe: .output/public
+npm run preview         # statischen Build lokal ansehen: http://localhost:4173
+npm run build:preview   # beides nacheinander
 ```
+
+Redirects und Header (`_redirects`, `_headers`) greifen nur beim Hoster, nicht lokal.
+
+## Per Klick in VS Code
+
+Ordner `VueJS-Project` in VS Code öffnen, dann:
+
+- **Ausführen und Debuggen** (Strg+Umschalt+D) → oben Konfiguration wählen → ▶ (oder F5)
+  - ▶ Dev-Server starten – öffnet den Browser automatisch
+  - 🔨 Build (statisch generieren)
+  - 👀 Build + Vorschau
+- **Strg+Umschalt+B** startet direkt den Build
+- Alle Tasks: Strg+Umschalt+P → „Tasks: Run Task“
 
 ## Struktur
 
@@ -31,9 +45,8 @@ npx serve .output/public   # lokal testen (Redirects/Header greifen nur beim Hos
 
 ## Workflow
 
-- `main` ist immer deploybar – Netlify baut jeden Push auf `main` automatisch.
-- Neue Arbeit in Feature-Branches (`feature/…`), Merge per Pull Request.
-- Pull Requests bekommen bei Netlify automatisch eine Vorschau-URL.
+- Es wird direkt auf `main` gearbeitet.
+- Netlify baut jeden Push auf `main` automatisch – vorher lokal `npm run generate` prüfen.
 
 ## Sicherheit
 

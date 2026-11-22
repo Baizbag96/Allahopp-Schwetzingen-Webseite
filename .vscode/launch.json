@@ -1,0 +1,38 @@
+{
+  // Start per Klick: Seitenleiste "Ausführen und Debuggen" (Strg+Umschalt+D),
+  // Konfiguration oben auswählen und auf ▶ klicken – oder einfach F5.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶ Dev-Server starten",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Local:\\s+(https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "🔨 Build (statisch generieren)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run generate",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "👀 Build + Vorschau",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run build:preview",
+      "cwd": "${workspaceFolder}",
+      "serverReadyAction": {
+        "pattern": "Accepting connections at (https?://\\S+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

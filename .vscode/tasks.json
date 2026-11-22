@@ -1,0 +1,54 @@
+{
+  // Aufruf: Strg+Umschalt+P → "Tasks: Run Task"
+  // Strg+Umschalt+B startet direkt den Build.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev-Server starten",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "nuxt",
+        "pattern": { "regexp": "^x{0}$" },
+        "background": {
+          "activesBegin": "Nuxt",
+          "beginsPattern": "Nuxt",
+          "endsPattern": "Local:"
+        }
+      },
+      "presentation": { "panel": "dedicated", "reveal": "always" }
+    },
+    {
+      "label": "Build (statisch generieren)",
+      "type": "npm",
+      "script": "generate",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "panel": "dedicated", "reveal": "always", "clear": true }
+    },
+    {
+      "label": "Vorschau des Builds",
+      "type": "npm",
+      "script": "preview",
+      "dependsOn": "Build (statisch generieren)",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "serve",
+        "pattern": { "regexp": "^x{0}$" },
+        "background": {
+          "activesBegin": "serve",
+          "beginsPattern": "serve",
+          "endsPattern": "Accepting connections"
+        }
+      },
+      "presentation": { "panel": "dedicated", "reveal": "always" }
+    },
+    {
+      "label": "Abhängigkeiten installieren",
+      "type": "npm",
+      "script": "install",
+      "problemMatcher": []
+    }
+  ]
+}
