@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  // Keine anonymen Nutzungsdaten an Nuxt senden (und keine Nachfrage beim Start)
+  telemetry: false,
+
   modules: ['@nuxtjs/sitemap', 'nuxt-security'],
 
   css: ['~/assets/css/main.css'],
