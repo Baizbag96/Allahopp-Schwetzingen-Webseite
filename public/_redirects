@@ -13,7 +13,9 @@
 /alte-seite/4611  /oeffnungszeiten   301
 /alte-seite/312   /kontakt           301
 /alte-seite/3     /datenschutz       301
-/alte-seite/*     /                  301
+# Unbekannte IDs: 404 statt Umleitung auf "/" – sonst Endlosschleife,
+# weil Netlify ?page_id=… wieder an "/" anhängt
+/alte-seite/*     /404.html          404
 
 /privacy-policy   /datenschutz       301
 /privacy-policy/  /datenschutz       301
