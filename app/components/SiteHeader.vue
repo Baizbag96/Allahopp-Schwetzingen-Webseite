@@ -5,10 +5,16 @@ watch(() => route.path, () => (open.value = false))
 </script>
 
 <template>
-  <header class="border-b border-neutral-200 bg-white">
+  <header class="border-b-4 border-green bg-white">
     <div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-      <NuxtLink to="/" class="text-xl font-bold text-brand">
-        alla hopp! <span class="font-normal text-neutral-600">Schwetzingen</span>
+      <NuxtLink to="/" class="shrink-0">
+        <img
+          src="/bilder/logo.png"
+          alt="alla hopp! Schwetzingen – zur Startseite"
+          width="400"
+          height="292"
+          class="h-14 w-auto md:h-16"
+        >
       </NuxtLink>
 
       <button

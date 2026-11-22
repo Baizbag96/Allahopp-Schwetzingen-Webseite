@@ -27,9 +27,12 @@ export default defineNuxtConfig({
       titleTemplate: '%s · alla hopp! Schwetzingen',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#e2001a' },
+        { name: 'theme-color', content: '#00618a' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/icon-192.png' },
+        { rel: 'apple-touch-icon', href: '/icon-192.png' },
+      ],
     },
   },
 

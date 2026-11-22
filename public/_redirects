@@ -19,6 +19,7 @@
 # Speise- und Getränkekarte
 /wp-content/uploads/2026/01/Tafel-alla-Hopp-Speisen_2025.pdf    /karten/speisen.pdf    301
 /wp-content/uploads/2026/01/Karte-alla-hopp-Getraenke_2025.pdf  /karten/getraenke.pdf  301
+/wp-content/uploads/2026/01/alla-hopp-Flyer_Geburtstag.pdf      /karten/geburtstag-flyer.pdf  301
 
 # Restliche WordPress-Pfade
 /wp-admin/*     /  301

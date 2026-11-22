@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Markenfarben – an das Logo anpassen, sobald es in Originalqualität vorliegt */
-  --color-brand: #e2001a;
-  --color-brand-dark: #b00014;
-  --color-accent: #ffcc00;
+  /* Markenfarben aus dem Logo */
+  --color-brand: #00618a;       /* Blau */
+  --color-brand-dark: #004a6a;
+  --color-brand-light: #e6f0f4;
+  --color-green: #93c01f;       /* Grün */
+  --color-green-dark: #6f9416;
+  --color-sun: #fae800;         /* Gelb */
 
   /* Systemschriften: keine externen Fonts nötig (DSGVO).
      Eigene Schrift später lokal unter app/assets/fonts einbinden. */
@@ -13,4 +16,22 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Fließtext-Seiten (Datenschutz, Impressum, alla Hopp) */
+.prose-text h2 {
+  @apply mt-8 mb-2 text-xl font-semibold text-brand;
+}
+.prose-text h3 {
+  @apply mt-6 mb-1 text-lg font-semibold;
+}
+.prose-text p,
+.prose-text ul {
+  @apply mb-3 leading-relaxed;
+}
+.prose-text ul {
+  @apply list-disc pl-6;
+}
+.prose-text a {
+  @apply text-brand underline;
 }
